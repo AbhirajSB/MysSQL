@@ -1,0 +1,31 @@
+CREATE TABLE employees (
+    employee_id INT AUTO_INCREMENT,
+    first_name VARCHAR(10) NOT NULL,
+    role VARCHAR(10),
+    FIRM VARCHAR(20) DEFAULT"DUNDER MIFFLIN",
+    PRIMARY KEY(employee_id)
+);
+
+INSERT INTO employees(first_name, role) VALUES("Dwight","Sales");
+INSERT INTO employees(first_name, role) VALUES ("Oscar","Accountant");
+INSERT INTO employees(first_name, role) VALUES ("Creed","Quality A");
+INSERT INTO employees(first_name, role) VALUES ("Ryan","Temp");
+INSERT INTO employees(first_name, role) VALUES ("Toby","HR");
+INSERT INTO employees(first_name, role) VALUES ("Michael","R.Manager");
+INSERT INTO employees(first_name, role) VALUES ("Pam","Reception");
+INSERT INTO employees(first_name, role) VALUES ("Andy","Sales");
+INSERT INTO employees(first_name, role) VALUES ("Kelly","C.Service");
+INSERT INTO employees(first_name, role) VALUES ("Meredith","SR.REP");
+
+UPDATE employees SET role = "Sales" WHERE role = "Reception"
+
+DESCRIBE employees;
+
+SELECT * FROM employees;
+
+SELECT first_name, role FROM employees ORDER BY first_name;
+SELECT first_name, role FROM employees ORDER BY first_name DESC;
+
+DELETE FROM employees WHERE employee_id='11';
+
+DROP TABLE employees;
